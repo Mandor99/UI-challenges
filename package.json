@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass sass/main.scss:css/style.css --watch",
-    "devserver": "live-server",
-    "start": "sass"
+    
   },
   "repository": {
     "type": "git",
@@ -20,8 +18,5 @@
   },
   "homepage": "https://github.com/Mandor99/UI-challenges#readme",
   "dependencies": {},
-  "devDependencies": {
-    "live-server": "^1.2.1",
-    "sass": "^1.43.5"
-  }
+  "devDependencies": {}
 }

@@ -1,0 +1,48 @@
+.stack {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .box {
+        background-color: #fff;
+        border-radius: 7px;
+        box-shadow: 0 0 10px rgba(226, 221, 215, .4);
+        transition: all .3s ease;
+        display: flex;
+        gap: 1rem;
+        padding: 0.5rem 3.5rem 0.5rem 1rem;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+
+        &__content {
+            width: 170px;
+            overflow: hidden;
+        }
+
+        &__logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+        }
+
+        &__title {
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &__desc {
+            color: #aaa;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
