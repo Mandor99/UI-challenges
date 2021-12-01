@@ -1,0 +1,23 @@
+1. if u want auto mode theme depends on OS mode ==>> {
+    a. @media (prefers-color-scheme: dark) {
+        :root {
+            //your vars
+        }
+    }
+    //listen on media query and if matches it 
+    b. window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => (e.matches ? enableDark(): disableDark()))
+}
+
+2. you can make class with vars and will be inherited {
+    .dark-mode {
+        //vars
+    }
+}
+
+3. with JS ==>> {
+    a.## store elected theme in localStorage
+    b. click on toggleBtn => {
+        1. change the icon 
+        2. document.body.classList.toggle('dark-mode')
+    }
+}
