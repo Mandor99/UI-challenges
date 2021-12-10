@@ -21,3 +21,13 @@
         2. document.body.classList.toggle('dark-mode')
     }
 }
+
+/*************************************************************/
+3. avatar random background color and text color ==>> {
+    a. random txt color => mix-blend-mode: difference;
+    b. getRandomColor => () => {
+        // color is hexadecimal ( [0-9 + a-f] => (16 indexes) ) and color contains is 6 indexes '#00ffee' 
+        //color[math.floor(math.random() * 16)] => 16 is n.of [0-9, a-f] to choose from these
+    }
+    c. if no avatar image => make the avatar the [0] word of name(1,2) 
+}
