@@ -1,0 +1,109 @@
+@import './global';
+
+:root {
+    --ticket-color1: #d25778;
+    --ticket-color2: #ec585c;
+    --ticket-color3: #e7d155;
+    --ticket-color4: #56a8c6;
+}
+
+.wrapper {
+    padding: 5px;
+    background: linear-gradient(to right, var(--ticket-color1), var(--ticket-color2), var(--ticket-color3), var(--ticket-color4));
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms cubic-bezier(0.03, 0.98, 0.53, 0.99) 0s;
+
+    &::before, &::after {
+        content: '';
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        background-color: #000;
+    }
+
+    &::before {
+        left: -30px;
+        border: 5px solid var(--ticket-color1);
+        // background-color: var(--ticket-color1);
+    }
+
+    &::after {
+        right: -30px;
+        border: 5px solid var(--ticket-color4);
+        // background-color: var(--ticket-color4);
+    }
+}
+
+.ticket {
+    background-color: #000;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        // border: 2px solid #fff;
+        background-color: #000;
+        border-radius: 15px;
+    }
+
+    &__order {
+        &--number {
+            transform: rotate(90deg);
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    border-right: 2px dashed #333;
+    padding: 1rem;
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        &--pic {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &--details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &--name {
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        &--links {
+            color: #8a8f98;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+    }
+}

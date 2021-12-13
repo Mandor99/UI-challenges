@@ -31,3 +31,23 @@
     }
     c. if no avatar image => make the avatar the [0] word of name(1,2) 
 }
+
+/**********************************************/
+//ticket
+
+* u can use border-image: linear-gradient() but will not work with border-radius
+==>> so u 'll use div > div with different bg-color and padding for the parent to show his bg(border-color)
+
+* move ticket with mouse movement ==>> {
+    1. make ticket 3D => perspective: 1000px;
+    2. certain [center point of ticket] => to ==>> (mouse point - center point) = varOfMovement
+    * varOfMovement * number => to be small
+    ==>> {
+        * mouse points ==>> (e.clientX, e.clientY)
+        * center point of ticket ==>> {x, y, width, height} = ticket.getBoundingClientRect()
+            => centerPoint = {x: x+width/2, y: y+height/2}
+        * degX = (e.clientY - centerPoint.y) * .008 // X calcs to rotate on Y
+        * degY = (e.clientX - centerPoint.x) * -.008 // Y calcs to rotate on X
+        * ticket transformRotate: (degX)deg, (degY)deg
+    }
+}
